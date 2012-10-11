@@ -6,7 +6,7 @@
  * @author moreau
  *
  */
-public class Entreprise {
+public class Entreprise implements Contactable{
 	/**
 	 * nom de l'entreprise
 	 */

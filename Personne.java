@@ -4,9 +4,9 @@
 
 /**
  * @author moreau
- * une classe Personne qui va dŽfinir les informations relatives ˆ une Personne
+ * une classe Personne qui va dï¿½finir les informations relatives ï¿½ une Personne
  */
-public class Personne {
+public class Personne implements Contactable {
 	
 	/** 
 	 * Le nom de la personne
@@ -14,7 +14,7 @@ public class Personne {
 	private String nom;
 	
 	/**
-	 *  Le prŽnom de la personne
+	 *  Le prï¿½nom de la personne
 	 */
 	private String prenom;
 	
@@ -24,7 +24,7 @@ public class Personne {
 	private boolean sexe;
 	
 	/**
-	 *  L'annŽe de naissance de la personne
+	 *  L'annï¿½e de naissance de la personne
 	 */
 	private int anneeNaissance;
 	
