@@ -9,20 +9,20 @@
 public class Employe extends Personne {
 
 	/**
-	 * numro d'employ
+	 * numï¿½ro d'employï¿½
 	 */
 	private int numero;
 	
 	/**
-	 * Entreprise dans laquelle travaille l'employ
+	 * Entreprise dans laquelle travaille l'employï¿½
 	 */
-	Entreprise entreprise;
+	private Entreprise entreprise;
 	
 	/**
 	 * @return the entreprise
 	 */
 	public Entreprise getEntreprise() {
-		return entreprise;
+		return this.entreprise;
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class Employe extends Personne {
 	 * @return the numero
 	 */
 	public int getNumero() {
-		return numero;
+		return this.numero;
 	}
 
 	/**
@@ -65,8 +65,8 @@ public class Employe extends Personne {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString()+" - travaille chez "+entreprise.getNom()+
-		", numro "+this.numero;
+		return super.toString()+" - travaille chez "+ this.entreprise.getNom()+
+		", numï¿½ro "+this.numero;
 	}
 
 	public static void main(String[] args) {

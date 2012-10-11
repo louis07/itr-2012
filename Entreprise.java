@@ -27,9 +27,10 @@ public class Entreprise {
 	}
 	
 	/**
-	 * constructeur qui cre une entreprise
+	 * constructeur qui crï¿½e une entreprise
 	 */
 	public Entreprise(String nom) {
 		this.nom = nom;
 	}
 }
+
