@@ -2,6 +2,8 @@
  * Ceci est le fichier de ma classe Personne
  */
 
+class NoContactInfoException extends Exception {}
+
 /**
  * @author moreau
  * une classe Personne qui va d�finir les informations relatives � une Personne
@@ -27,6 +29,11 @@ public class Personne implements Contactable {
 	 *  L'ann�e de naissance de la personne
 	 */
 	private int anneeNaissance;
+	
+	/**
+	 *  Le contact de la personne
+	 */
+	private Contact contact;
 	
 	
 	/**
@@ -91,6 +98,23 @@ public class Personne implements Contactable {
 	public void setAnneeNaissance(int anneeNaissance) {
 		this.anneeNaissance = anneeNaissance;
 	}
+	
+	/**
+	 * @return the contact
+	 * @throws NoContactInfoException 
+	 */
+	public Contact getContactInfo() throws NoContactInfoException {
+		if(this.contact == null)throw new NoContactInfoException();
+		else return this.contact;
+	}
+
+
+	/**
+	 * @param contact the contact to set
+	 */
+	public void setContactInfo(Contact contact) {
+		this.contact = contact;
+	}
 
 
 	public String toString() {
@@ -111,6 +135,7 @@ public class Personne implements Contactable {
 		this.prenom = prenom;
 		this.sexe = sexe;
 		this.anneeNaissance = anneeNaissance;
+		this.contact = null;
 	}
 
 
@@ -120,8 +145,19 @@ public class Personne implements Contactable {
 	public static void main(String[] args) {
 		Personne p = new Personne("Moreau","Guillaume",true,1973);
 		
+		try {
+			p.getContactInfo();
+		}
+		catch (NoContactInfoException e){
+			System.out.println("No ContactInfo registred yet.");
+			
+		}
+		
 		System.out.println(p);
 		
 	}
+
+
+	
 
 }
